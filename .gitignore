@@ -1,0 +1,14 @@
+# python specific
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# environemt variable
+*.env
+
+# virtualenv
+*.env
+.venv/
+venv/
+ENV

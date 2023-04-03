@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen"href="{{ url_for('static', filename='menu/css/menu.css') }}" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <title>Escape from the Forest</title>
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div id="content-container">
+        <h1>Escape from the forest: <span class="subtitle">The game</span></h1>
+        <a href="{{ url_for('terminal') }}"><button id="start-button">></button></a>
+    </div>
+</body>
+<script type="module">
+    import { ParticleEffect } from "{{ url_for('static', filename='menu/js/particles.js') }}";
+
+    const canvas = document.getElementById("particle-canvas");
+    let particleColor = "rgba(119, 214, 167, 0.5)";
+
+    let effect = new ParticleEffect(canvas, particleColor);
+    effect.init();
+
+    const typingContainer = document.getElementById("start-button");
+    const originalText = " Start Playing"
+    let textIndex = 0;
+
+    function typingEffect() {
+        if (textIndex < originalText.length) {
+            typingContainer.innerHTML = "> " + originalText.slice(0, textIndex + 1);
+            textIndex++;
+        } else {
+            textIndex = 0;
+        }
+        setTimeout(typingEffect, 200);
+    }
+
+    typingEffect();
+</script>
+
+</html>
