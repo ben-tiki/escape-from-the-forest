@@ -2,6 +2,9 @@
 
 Welcome to the thrilling Escape from the Forest Adventure Game! This text-based adventure game is inspired by a short skit from the Rick and Morty show, and uses OpenAI's GPT-4 to handle the game flow and game states. The game has the look and appearance of an old-school computer terminal, and the objective is to escape a dangerous forest filled with creatures such as vampires, hunters, and creatures.
 
+<p align="center">
+  <video src="https://user-images.githubusercontent.com/101474762/229404749-1a1879dc-8896-43de-8f6e-31aaf07795a1.mp4" controls></video>
+</p>
 
 ## Features
 
